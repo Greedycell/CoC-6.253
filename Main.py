@@ -88,9 +88,9 @@ if __name__ == '__main__':
 
     # Platform stuff
     if os.name == "nt":  # Windows
-        os.system("title CoC 5.2-6.56.1")
+        os.system("title CoC 5.x-x.56.1")
     else:  # Linux/MacOS
-        print("\033]0;CoC 5.2-6.56.1\007", end="")
+        print("\033]0;CoC 5.x-x.56.1\007", end="")
     os.system("cls" if platform.system() == "Windows" else "clear")
 
     print("""
