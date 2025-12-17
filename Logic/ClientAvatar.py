@@ -67,7 +67,18 @@ class LogicClientAvatar(Writer):
         ##### ARAYS #####
 
         self.writeInt(0)
-        self.writeInt(0)
+        
+        self.writeInt(3) #array 2, resource data slot data
+        # Gold
+        self.writeInt(3000001)
+        self.writeInt(1000000000) # Gold Amount
+        # Elixir
+        self.writeInt(3000002)
+        self.writeInt(1000000000) # Elixir Amount
+        # Dark Elixir
+        self.writeInt(3000003)
+        self.writeInt(1000000000) # Dark Elixir Amount
+
         self.writeInt(0)
         self.writeInt(0)
         self.writeInt(0)
