@@ -19,4 +19,5 @@ class LoginMessage(Reader):
     def process(self):
         LoginOkMessage(self.client, self.player).Send()
         OwnHomeDataMessage(self.client, self.player).Send()
-        AvatarStreamMessage(self.client, self.player).Send()
+
+        #AvatarStreamMessage(self.client, self.player).Send()
