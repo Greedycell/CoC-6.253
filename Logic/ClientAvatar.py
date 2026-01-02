@@ -75,13 +75,13 @@ class LogicClientAvatar(Writer):
         self.writeInt(3) #array 2, resource data slot data
         # Gold
         self.writeInt(3000001)
-        self.writeInt(self.player.Gold)
+        self.writeInt(1000000000) #gold
         # Elixir
         self.writeInt(3000002)
-        self.writeInt(self.player.Elixir)
+        self.writeInt(1000000000) #elixir
         # Dark Elixir
         self.writeInt(3000003)
-        self.writeInt(self.player.DarkElixir)
+        self.writeInt(1000000000) #darkelixir
         
         self.writeInt(0) #array 3, unit slot data
         self.writeInt(0) #array 4, spell slot data
@@ -92,10 +92,7 @@ class LogicClientAvatar(Writer):
         self.writeInt(0) #array 9, hero state slot
         self.writeInt(0) #array 10, alliance unit data
 
-        self.player.TutorialSteps = 10 if self.player.NameSetByUser == 0 else 35
-        self.writeInt(self.player.TutorialSteps)  #array 11, tutorial steps data
-        for i in range(self.player.TutorialSteps):
-            self.writeInt(21000000 + i)
+        self.writeInt(0) #array 11, tutorial steps data
 
         self.writeInt(0) #array 12, achievement rewards data
         self.writeInt(0) #array 13, achievement progress data
