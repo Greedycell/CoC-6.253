@@ -11,8 +11,7 @@ class LogicClientHome(Writer):
 
         self.writeInt(0)
 
-        if self.player.Major > 6 or (self.player.Major == 6 and self.player.Minor >= 253): # v6.253.x or above
-            self.writeInt(0)
+        self.writeInt(0)
 
         self.writeInt(0)  # HighID
         self.writeInt(1)  # LowID
